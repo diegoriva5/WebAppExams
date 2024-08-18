@@ -63,8 +63,11 @@ function TableLayout(props) {
       </div>
       <TicketsTable 
         tickets={props.ticketList}  />
+      <Link to={'/login'}>
+        <Button variant='primary' className='my-2'>Login</Button>
+      </Link>
       <Link to={'/add'}>
-        <Button variant='primary' className='my-2'>Add Ticket</Button>
+        <Button variant='secondary' className='my-2'>Add Ticket</Button>
       </Link>
     </>
   );

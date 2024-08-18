@@ -12,7 +12,7 @@ const Navigation = (props) => {
                 <i className="bi bi-ticket-fill mx-2" />
                 Ticket Library
             </Navbar.Brand>
-            <Nav>
+            <Nav className='ms-auto'>
                 <Navbar.Text className="mx-2 fs-5">
                     {props.user && props.user.name && `Logged in as: ${props.user.name}`}
                 </Navbar.Text>

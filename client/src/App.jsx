@@ -98,21 +98,19 @@ function AppWithRouter(props) {
 
 
   return (
-    <Container fluid>
-      <Routes>
-        <Route path="/" element={loggedIn? <GenericLayout
-                                      message={message} setMessage={setMessage}
-                                      loggedIn={loggedIn} user={user} logout={handleLogout} /> : <Navigate replace to='/login' />} >
-          <Route index element={loggedIn? <TableLayout 
-              ticketList={ticketList} setTicketList={setTicketList}
-              dirty={dirty} setDirty={setDirty} /> : <Navigate replace to='/' />} />
-          <Route path="add" element={loggedIn? <AddLayout addTicket={addTicket} user={user}/> : <Navigate replace to='/' />} />
-          <Route path="confirmation" element={<ConfirmationPage />} />
-          <Route path="*" element={<NotFoundLayout />} />
-        </Route>
-        <Route path="/login" element={!loggedIn ? <LoginLayout login={handleLogin} /> : <Navigate replace to='/' />} />
-      </Routes>
-    </Container>
+    <Routes>
+      <Route path="/" element={<GenericLayout 
+                                  message={message} setMessage={setMessage}
+                                  loggedIn={loggedIn} user={user} logout={handleLogout} />}>
+        <Route index element={<TableLayout 
+            ticketList={ticketList} setTicketList={setTicketList}
+            dirty={dirty} setDirty={setDirty} />} />
+        <Route path="add" element={loggedIn ? <AddLayout addTicket={addTicket} user={user}/> : <Navigate replace to="/login" />} />
+        <Route path="confirmation" element={<ConfirmationPage />} />
+        <Route path="/login" element={<LoginLayout login={handleLogin} />} />
+        <Route path="*" element={<NotFoundLayout />} />
+      </Route>
+    </Routes>
   );
 }
 

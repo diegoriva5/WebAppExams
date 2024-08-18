@@ -18,7 +18,7 @@ function TicketsTable(props) {
       </thead>
       <tbody>
         {tickets.map((ticket) => (
-          <TicketRow ticketData={ticket} key={ticket.id} />
+          <TicketRow ticketData={ticket} key={tickets.id} />
           ))}
       </tbody>
     </Table>
