@@ -1,0 +1,66 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.full-width-table {
+  width: 100% !important;
+}
+
+.table-bordered th, .table-bordered td {
+  border-right: 1px solid #ddd; /* Adds a right border to each cell */
+}
+
+.table-bordered th:last-child, .table-bordered td:last-child {
+  border-right: 1px solid #ddd; /* Remove the right border from the last column */
+}
+
+.top-left-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: flex-start; /* Align content to the top */
+  height: 100%; /* Ensure it takes the full height of the container */
+}
+
+.Table {
+  width: 100%;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

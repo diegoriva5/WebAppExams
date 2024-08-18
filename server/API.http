@@ -1,0 +1,20 @@
+# This file could be used for testing the API with Visual Studio Code
+
+## Create new ticket (without ID)
+POST http://localhost:3001/api/create-ticket HTTP/1.1
+
+content-type: application/json
+
+{
+    "category": "inquiry",
+    "title": "Test Ticket",
+    "description": "This is a test description"
+}
+
+###
+
+## Retrieve all tickets
+
+GET http://localhost:3001/api/all-tickets HTTP/1.1
+
+###
